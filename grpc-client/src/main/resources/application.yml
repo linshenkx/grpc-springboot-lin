@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 9090
 spring:
   application:
     name: local-grpc-client
@@ -7,7 +7,7 @@ grpc:
   client:
     local-grpc-server:
       host:
-      - 127.0.0.1
+      - ${LOCAL-GRPC-HOST:127.0.0.1}
       port:
       - 9898
       enableKeepAlive: true

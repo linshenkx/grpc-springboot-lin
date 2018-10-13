@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+
+  grpc-server:
+    build: ./grpc-server
+    ports:
+      - 9898:9898
+  grpc-client:
+    build: ./grpc-client
+    ports:
+      - 9095:9090
+    environment:
+      - LOCAL-GRPC-HOST=116.196.113.170
